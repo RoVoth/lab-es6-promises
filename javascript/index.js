@@ -165,4 +165,25 @@ async function makeBroccoli() {
 makeBroccoli();
 
 // Bonus 2 - Promise all
+const b1 = obtainInstruction("#brusselsSprouts", 0)
+const b2 = obtainInstruction("#brusselsSprouts", 1)
+const b3 = obtainInstruction("#brusselsSprouts", 2)
+const b4 = obtainInstruction("#brusselsSprouts", 3)
+const b5 = obtainInstruction("#brusselsSprouts", 4)
+const b6 = obtainInstruction("#brusselsSprouts", 5)
+const b7 = obtainInstruction("#brusselsSprouts", 6)
+const b8 = obtainInstruction("#brusselsSprouts", 7)
+
+Promise.allSettled([ b1, b2, b3, b4, b5, b6, b7, b8])
+.then((step) => {
+step.forEach((step) => {
+ document.querySelector("#brusselsSprouts").innerHTML +=  `<li>${step}</li>`;
+})
+document.querySelector("#brusselsSprouts").innerHTML +=  `<li>Brussels sprouts are ready!</li>`;
+})
+.catch((err) => {
+  console.log(err)
+
+})
+
 // ...
