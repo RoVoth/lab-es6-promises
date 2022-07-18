@@ -141,7 +141,35 @@ obtainInstruction("steak", 0)
   .catch((error) => console.log(error));
 
 // Iteration 3 using async/await
-async function makeBroccoli() {}
+async function makeBroccoli()  {
+  try {
+  const paso1 = await obtainInstruction("#broccoli", 0 )
+  document.querySelector("#broccoli").innerHTML +=  `<li>${step1}</li>`;
+
+  const paso2 = await obtainInstruction("#broccoli", 1 )
+  document.querySelector("#broccoli").innerHTML += `<li>${step2}</li>`;
+
+  const paso3 = await obtainInstruction("#broccoli", 2 )
+  document.querySelector("#broccoli").innerHTML += `<li>${step3}</li>`;
+
+  const paso4 = await obtainInstruction("#broccoli", 3 )
+  document.querySelector("#broccoli").innerHTML += `<li>${step4}</li>`;
+
+  const paso5 = await obtainInstruction("#broccoli", 4 )
+  document.querySelector("#broccoli").innerHTML += `<li>${step5}</li>`;
+
+  const paso6 = await obtainInstruction("#broccoli", 5 )
+  document.querySelector("#broccoli").innerHTML += `<li>${step6}</li>`;
+
+  const paso7 = await obtainInstruction("#broccoli", 6 )
+  document.querySelector("#broccoli").innerHTML += `<li>${step7}</li>`;
+  document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!</li>`;
+
+  }catch (error) {
+    console.log(error)
+  }
+  makeBroccoli()
+}
 
 // Bonus 2 - Promise all
 // ...
